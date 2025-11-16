@@ -93,3 +93,70 @@
     - *Color Item:*  You can make the keyword a custom color by using the `color_list(color: blue, ...)` command and specify the color you prefer.
   ])
 ])
+
+#colbreak()
+
+#pad(demon_line(), top: -24pt, bottom: -24pt)
+= Boxes
+
+#columns(2, [
+  There are various types of box provided by this template. These are commands that can be used to highlight special rules or important information in a compact way. These boxes are not floats but are placed as part of the text. Therefore, they can be placed both inside a `columns` command, to produce a one-column wide box, or outside, to create a two-column spanning box.
+
+  #colbreak()
+
+  #dragon_box("Dragonbox", [
+    - *These Rules Are:* Obligatory
+
+    This can be created with the `dragon_box(...)` command. It can be used to highlight important information in a compact and noticeable way.
+
+    It can be used, for example, to typeset a Heroic Ability. In that case, you can use a list, as above, to note the Willpower cost for the ability.
+  ])
+])
+
+#dragon_box("Wide Boxes", [
+  #columns(2, [
+    Both `dragon_box(...)` and `demon_box(...)` can be used outside a `columns(...)` command to make it span the whole page width. When using text inside a wide box, it is good practice to use `columns(...)` inside the box to get a two column layout in the box and prevent overly long lines.
+
+    #colbreak()
+
+    == Subsection
+
+    Lower level headings such as this one and paragraphs can be used inside boxes.
+
+    #par[
+      *PARAGRAPH:* Using these headings can help make the text inside a box more ordered and provide a better overview.
+    ]
+  ])
+])
+
+#table_box("Tablebox", table(
+  align: (center, left, center, left),
+  columns: (10%, 14%, 15%, auto),
+
+  table.header([*DICE*], [*LABEL*], [*ALIGNMENT*], [*DESCRIPTION*]),
+  table.hline(),
+
+  [1],
+  [Dice],
+  [center],
+  [If you want a table to be rollable, use the first column as the die or dice column. Give it a header denoting the die/dice used, and number the rows. ],
+  table.hline(stroke: 0.5pt),
+
+  [2],
+  [Label],
+  [left],
+  [The first or second column of a table should be the label of the entry. This gives a short and meaningful name to the entry in the row. ],
+  table.hline(stroke: 0.5pt),
+
+  [3],
+  [Score],
+  [center],
+  [You can add several narrower columns for short, standardized scores, such as price, availability, durability, etc. ],
+  table.hline(stroke: 0.5pt),
+
+  [4],
+  [Description],
+  [left],
+  [The typically last column in a table is a longer description of the entry. Use a breaking alignment for this, so the description can be more than one line. ],
+  table.hline(stroke: 0.5pt),
+))
