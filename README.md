@@ -2,6 +2,24 @@
 
 This is a [Typst template](https://typst.app/docs/tutorial/making-a-template/) designed to create game supplements for the [Dragonbane RPG](https://freeleaguepublishing.com/games/dragonbane/) by Free League under the [Dragonbane Third-Party Supplement Licence](https://freeleaguepublishing.com/community-content/free-tabletop-licenses/).
 
+## Git LFS
+
+This template uses [Git LFS](https://git-lfs.com/) for large binary files (such as fonts and images).
+
+To clone the repository with all assets:
+
+```console
+git lfs install
+git clone https://github.com/Fahien/dragonbane-typst-template.git
+```
+
+If you have already cloned the repository without Git LFS, run:
+
+```console
+git lfs install
+git lfs pull
+```
+
 ## Fonts
 
 Download and install the required fonts:
