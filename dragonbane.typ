@@ -33,6 +33,8 @@
 
   "The Jabberwocky" by John Tenniel (Public Domain).
 
+  "Knight" designed by #link("www.freepik.com", "Freepik.com").
+
   This game supplement was created under Fria Ligan AB's #link("https://freeleaguepublishing.com/wp-content/uploads/2023/11/Dragonbane-License-Agreement.pdf", [Dragonbane Third Party Supplement License]) to be used with the core rules of _Dragonbane_.
 
   This game supplement is neither affiliated with, sponsored, or endorsed by Fria Ligan AB.
@@ -160,3 +162,33 @@
   [The typically last column in a table is a longer description of the entry. Use a breaking alignment for this, so the description can be more than one line. ],
   table.hline(stroke: 0.5pt),
 ))
+
+#colbreak()
+
+#columns(2, [
+  #character_box(picture: "img/knight.png", "Character's Name", [
+    The command `character_box(...)` can be used to create a box for a character. It includes a header for the character's name, content which can include stats, abilities, background information, and optionally a picture.
+
+    #table(
+      align: (left),
+      columns: 100%,
+      table.hline(stroke: 0.5pt),
+      grid(
+        columns: (50%, 50%),
+        align: (left, right),
+        [*Movement:* 14], [*HP*: 16],
+      ),
+      table.hline(stroke: 0.5pt),
+      grid(
+        columns: (50%, 50%),
+        align: (left, right),
+        [*Armor:* Plate Armor (6)], [*WP*: 20],
+      ),
+      table.hline(stroke: 0.5pt),
+      [*Skills:* Sword 13, Awareness 12],
+      table.hline(stroke: 0.5pt),
+      [*Weapons:* Longsword],
+      table.hline(stroke: 0.5pt),
+    )
+  ])
+])

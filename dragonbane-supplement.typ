@@ -378,11 +378,16 @@
 #let demon_box(name, content) = scroll_box(name: name, content, color: demon_green)
 
 // Scroll box variant for character stat blocks.
-#let character_box(name, content) = scroll_box(
-  name: text(name, fill: scroll_brown),
-  color: burned_sand,
-  content,
-)
+#let character_box(name, content, picture: auto, bottom: 0pt) = {
+  if picture != auto {
+    pad(align(center, image(picture)), bottom: bottom - 32pt)
+  }
+  scroll_box(
+    name: text(name, fill: scroll_brown),
+    color: burned_sand,
+    content,
+  )
+}
 
 // Standalone spiky header with following table content.
 #let table_box(name, content, color: demon_green) = {
